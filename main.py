@@ -17,7 +17,8 @@ def main():
         # 若是要中文，去captions調成xml標記型態
         "lang": "a.en",
         # 取前幾部就好
-        "counts": 10
+        "counts": 5,
+        "downloadUrl": True,
     }
 
     steps = [
