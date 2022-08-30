@@ -2,6 +2,7 @@ from youtube.pipline.steps.getCaptions import GetCaptions
 from youtube.pipline.steps.makeDir import MakeDir
 from youtube.pipline.pipeline import Pipeline
 from youtube.pipline.steps.getUrls import GetUrls
+from youtube.pipline.steps.readCaptions import ReadCaptions
 from youtube.utils import Utils
 
 # 李永樂
@@ -18,13 +19,15 @@ def main():
         "lang": "a.en",
         # 取前幾部就好
         "counts": 5,
-        "downloadUrl": True,
+        "downloadUrl": False,
     }
+
 
     steps = [
         MakeDir(),
         GetUrls(),
         GetCaptions(),
+        ReadCaptions(),
     ]
 
     utils = Utils()
